@@ -1,0 +1,5 @@
+psycopg2-binary
+django==5.0
+djangorestframework
+django-extensions
+django-cors-headers

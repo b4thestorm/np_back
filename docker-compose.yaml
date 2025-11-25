@@ -1,0 +1,25 @@
+services:
+  db:
+   image: postgres:17
+   environment:
+     POSTGRES_DB: 'novellia_pets'
+     POSTGRES_USER: 'arnoldsanders'
+     POSTGRES_PASSWORD: ''
+     POSTGRES_HOST_AUTH_METHOD: 'trust'
+   ports:
+     - "5432:5432"
+  api:
+    build: ./novellia_pets/
+    ports:
+      - "8000:8000"
+    depends_on:
+     - db
+    volumes:
+      - ./api:/api
+    command: bash -c "python novellia_pets/manage.py runserver 0.0.0.0:8000"
+  web:
+    build: ./novellia-pets/src
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./web:/src
