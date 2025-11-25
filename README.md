@@ -27,6 +27,8 @@ WIP:
             npm run dev
 
 
+[Frontend GitURL](https://github.com/b4thestorm/np_front)
+
 Use of AI: 
     Debugging typescript errors in the frontend - not 100%, but enough to mention it
     Design system, I pretty much used Subframe UI heavily, I edited tailwind where it was necessary
